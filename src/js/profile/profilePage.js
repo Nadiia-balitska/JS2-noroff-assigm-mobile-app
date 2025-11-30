@@ -1,7 +1,7 @@
-import { getProfile } from "../api/profile/read";
-import { followProfile } from "../api/profile/follow";
-import { unfollowProfile } from "../api/profile/unfollow";
-import { getAuth } from "../utilities/storage";
+import { getProfile } from "../api/profile/read.js";
+import { followProfile } from "../api/profile/follow.js";
+import { unfollowProfile } from "../api/profile/unfollow.js";
+import { getAuth } from "../utilities/storage.js";
 
 const profileHeader = document.getElementById("profileHeader");
 const profileStatus = document.getElementById("profileStatus");
@@ -10,7 +10,7 @@ const backBtn = document.getElementById("backToFeedBtn");
 
 const auth = getAuth();
 if (!auth?.accessToken) {
-  window.location.href = "/auth/login/";
+  window.location.href = "/auth/login/index.html";
 }
 
 const params = new URLSearchParams(window.location.search);
@@ -53,7 +53,7 @@ function renderProfileHeader(profile) {
         <div class="profile-actions">
           ${
             isMe
-              ? `<span class="profile-badge">This is you 🫶</span>`
+              ? `<span class="profile-badge">This is me 🫶</span>`
               : `<button id="followBtn" class="btn secondary">
                   ${isFollowing ? "Unfollow" : "Follow"}
                  </button>`

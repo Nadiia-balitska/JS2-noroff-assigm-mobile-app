@@ -1,8 +1,8 @@
 import {
   API_AUTH_LOGIN,
   API_AUTH_REGISTER,
-} from "./constants";
-import { headers } from "./headers";
+} from "./constants.js";
+import { headers } from "./headers.js";
 
 
 export async function registerUser({ name, email, password, avatarUrl }) {

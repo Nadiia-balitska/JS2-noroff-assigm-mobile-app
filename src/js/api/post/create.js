@@ -1,6 +1,6 @@
-import { API_SOCIAL_POSTS } from "../constants";
-import { headers } from "../headers";
-import { getAuth } from "../../utilities/storage";
+import { API_SOCIAL_POSTS } from "../constants.js";
+import { headers } from "../headers.js";
+import { getAuth } from "../../utilities/storage.js";
 
 
 export async function createPost(data) {

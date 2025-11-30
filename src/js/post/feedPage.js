@@ -1,5 +1,5 @@
-import { getAllPosts } from "../api/post/read";
-import { getAuth, clearAuth } from "../utilities/storage";
+import { getAllPosts } from "../api/post/read.js";
+import { getAuth, clearAuth } from "../utilities/storage.js";
 
 const postsContainer = document.getElementById("postsContainer");
 const feedStatus = document.getElementById("feedStatus");
@@ -12,7 +12,7 @@ let allPosts = [];
 
 const auth = getAuth();
 if (!auth?.accessToken) {
-  window.location.href = "/auth/login/";
+  window.location.href = "/auth/login/index.html";
 }
 
 function renderPosts(posts) {
@@ -116,15 +116,15 @@ searchInput?.addEventListener("input", (event) => {
 
 logoutBtn?.addEventListener("click", () => {
   clearAuth();
-  window.location.href = "/auth/login/";
+  window.location.href = "/auth/login/index.html";
 });
 
 createPostBtn?.addEventListener("click", () => {
-  window.location.href = "/post/create/";
+  window.location.href = "/post/create/index.html";
 });
 
 profileBtn?.addEventListener("click", () => {
-  window.location.href = "/profile/";
+  window.location.href = "/profile/index.html";
 });
 
 

@@ -1,6 +1,6 @@
-import { getPost } from "../api/post/read";
-import { updatePost } from "../api/post/update";
-import { getAuth } from "../utilities/storage";
+import { getPost } from "../api/post/read.js";
+import { updatePost } from "../api/post/update.js";
+import { getAuth } from "../utilities/storage.js";
 
 const form = document.getElementById("editPostForm");
 const errorEl = document.getElementById("editPostError");

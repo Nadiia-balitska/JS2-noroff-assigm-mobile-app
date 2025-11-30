@@ -1,5 +1,5 @@
-import { createPost } from "../api/post/create";
-import { getAuth } from "../utilities/storage";
+import { createPost } from "../api/post/create.js";
+import { getAuth } from "../utilities/storage.js";
 
 const form = document.getElementById("createPostForm");
 const errorEl = document.getElementById("createPostError");

@@ -1,5 +1,5 @@
-import { loginUser } from "../api/auth";
-import { saveAuth } from "../utilities/storage";
+import { loginUser } from "../api/auth.js";
+import { saveAuth } from "../utilities/storage.js";
 
 const form = document.getElementById("loginForm");
 const errorEl = document.getElementById("loginError");

@@ -1,6 +1,6 @@
-import { API_SOCIAL_PROFILES } from "../constants";
-import { headers } from "../headers";
-import { getAuth } from "../../utilities/storage";
+import { API_SOCIAL_PROFILES } from "../constants.js";
+import { headers } from "../headers.js";
+import { getAuth } from "../../utilities/storage.js";
 
 
 export async function unfollowProfile(name) {

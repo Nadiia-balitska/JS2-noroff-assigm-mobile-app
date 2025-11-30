@@ -1,6 +1,6 @@
-import { getPost } from "../api/post/read";
-import { deletePost } from "../api/post/delete";
-import { getAuth } from "../utilities/storage";
+import { getPost } from "../api/post/read.js";
+import { deletePost } from "../api/post/delete.js";
+import { getAuth } from "../utilities/storage.js";
 
 const postEl = document.getElementById("singlePost");
 const postStatus = document.getElementById("postStatus");
