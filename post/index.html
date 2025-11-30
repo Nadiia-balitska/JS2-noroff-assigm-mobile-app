@@ -2,12 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <title>Feed | Social App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body>
-    <h1>Post Page</h1>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="app-header-left">
+          <span class="app-logo-dot"></span>
+          <span class="app-logo-text">Social<span>JS</span></span>
+        </div>
+
+        <div class="app-header-right">
+          <button id="createPostBtn" class="btn secondary">+ New post</button>
+          <button id="profileBtn" class="btn ghost">My profile</button>
+          <button id="logoutBtn" class="btn ghost">Logout</button>
+        </div>
+      </header>
+
+      <main class="feed-main">
+        <section class="feed-top">
+          <div>
+            <h1 class="feed-title">Feed</h1>
+            <p class="feed-subtitle">See what other students are posting ✨</p>
+          </div>
+
+          <div class="feed-search-wrapper">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search posts by title or content..."
+            />
+          </div>
+        </section>
+
+        <section id="feedStatus" class="feed-status"></section>
+
+        <section id="postsContainer" class="posts-grid"></section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/js/post/feedPage.js"></script>
   </body>
 </html>

@@ -2,15 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <title>Create post | Social App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
   <body>
-    <h1>Create Post</h1>
+    <main class="auth-container">
+      <section class="auth-card">
+        <h1>Create post</h1>
+        <p class="auth-subtitle">Share something with the community.</p>
 
-    <form name="createPost">
-      <button>Create Post</button>
-    </form>
+        <form id="createPostForm" class="auth-form">
+          <label>
+            Title *
+            <input id="title" name="title" type="text" required minlength="3" />
+          </label>
+
+          <label>
+            Body
+            <textarea
+              id="body"
+              name="body"
+              placeholder="Write your post..."
+            ></textarea>
+          </label>
+
+          <label>
+            Media URL (optional)
+            <input id="media" name="media" type="url" />
+          </label>
+
+          <p id="createPostError" class="auth-error" hidden></p>
+          <p id="createPostSuccess" class="auth-success" hidden></p>
+
+          <button type="submit" class="btn primary">Create</button>
+          <button type="button" id="cancelBtn" class="btn ghost" style="margin-top:0.4rem;">
+            Cancel
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/post/createPage.js"></script>
   </body>
 </html>

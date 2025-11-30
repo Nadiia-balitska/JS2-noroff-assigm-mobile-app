@@ -2,54 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <title>Register | Social App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
-
   <body>
-    <h1>Register</h1>
+    <main class="auth-container">
+      <section class="auth-card">
+        <h1>Create account</h1>
+        <p class="auth-subtitle">Use your @stud.noroff.no email.</p>
 
-    <form name="register">
-      <div>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          required
-          maxlength="20"
-          pattern="^[\w]+$"
-          title="Please enter a username using only letters and numbers"
-        />
-      </div>
+        <form id="registerForm" class="auth-form">
+          <label>
+            Username 
+            <input id="name" name="name" type="text" required minlength="3" />
+          </label>
 
-      <div>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          required
-          pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-          title="Please enter a valid noroff.no or stud.noroff.no address"
-        />
-      </div>
+          <label>
+            Email 
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="your.name@stud.noroff.no"
+            />
+          </label>
 
-      <div>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          minlength="8"
-        />
-      </div>
+          <label>
+            Password 
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              minlength="8"
+            />
+          </label>
 
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
-    </form>
+          <label>
+            Avatar URL (optional)
+            <input id="avatarUrl" name="avatarUrl" type="url" />
+          </label>
+
+          <p id="registerError" class="auth-error" hidden></p>
+          <p id="registerSuccess" class="auth-success" hidden></p>
+
+          <button type="submit" class="btn primary">Create account</button>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account?
+          <a href="/auth/login/">Log in</a>
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/auth/registerPage.js"></script>
   </body>
 </html>

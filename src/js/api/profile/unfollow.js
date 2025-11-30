@@ -3,14 +3,13 @@ import { headers } from "../headers";
 import { getAuth } from "../../utilities/storage";
 
 
-export async function getProfile(name) {
+export async function unfollowProfile(name) {
   const token = getAuth()?.accessToken;
 
   const response = await fetch(
-    `${API_SOCIAL_PROFILES}/${encodeURIComponent(
-      name
-    )}?_posts=true&_followers=true&_following=true`,
+    `${API_SOCIAL_PROFILES}/${encodeURIComponent(name)}/unfollow`,
     {
+      method: "PUT",
       headers: headers(token),
     }
   );
@@ -18,7 +17,9 @@ export async function getProfile(name) {
   const result = await response.json();
 
   if (!response.ok) {
-    throw new Error(result.errors?.[0]?.message || "Could not load profile.");
+    throw new Error(
+      result.errors?.[0]?.message || "Could not unfollow profile."
+    );
   }
 
   return result.data;
