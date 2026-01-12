@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">js2-noroff-assigm</string>
+    <string name="title_activity_main">js2-noroff-assigm</string>
+    <string name="package_name">com.nadiia.js2ca</string>
+    <string name="custom_url_scheme">com.nadiia.js2ca</string>
+</resources>
