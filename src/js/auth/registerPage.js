@@ -48,7 +48,7 @@ form.addEventListener("submit", async (event) => {
 
     showSuccess("Account created successfully! Redirecting to login...");
     setTimeout(() => {
-      window.location.href = "/auth/login/";
+      window.location.href = "/auth/login/index.html";
     }, 800);
   } catch (error) {
     console.error(error);

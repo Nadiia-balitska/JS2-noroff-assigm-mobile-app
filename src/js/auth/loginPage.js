@@ -29,7 +29,7 @@ form.addEventListener("submit", async (event) => {
       accessToken: data.accessToken,
     });
 
-    window.location.href = "/post/";
+    window.location.href = "/post/index.html";
   } catch (error) {
     console.error(error);
     showError(error.message);

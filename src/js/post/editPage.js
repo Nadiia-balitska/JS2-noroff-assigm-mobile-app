@@ -9,7 +9,7 @@ const cancelBtn = document.getElementById("cancelBtn");
 
 const auth = getAuth();
 if (!auth?.accessToken) {
-  window.location.href = "/auth/login/";
+  window.location.href = "/auth/login/index.html";
 }
 
 const params = new URLSearchParams(window.location.search);

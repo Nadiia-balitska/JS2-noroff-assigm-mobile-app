@@ -7,7 +7,7 @@ const successEl = document.getElementById("createPostSuccess");
 const cancelBtn = document.getElementById("cancelBtn");
 
 if (!getAuth()?.accessToken) {
-  window.location.href = "/auth/login/";
+  window.location.href = "/auth/login/index.html";
 }
 
 function showError(msg) {
